@@ -1,0 +1,5 @@
+/* Add this to your CSS file */
+.placeholder-white::placeholder {
+    color: white;
+  }
+  

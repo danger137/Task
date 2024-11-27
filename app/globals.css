@@ -1,42 +1,78 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.custom-card {
+    border: 2px dashed #e2d3f4;
+    border-radius: 10px;
+  }
+  .custom-card img {
+    border-radius: 10px 10px 0 0;
+  }
+
+  
+  .card {
+    transition: transform 0.3s ease-in-out;
+  }
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  
+  /* Default card size for larger screens */
+.card {
+  max-width: 100%;
+  height: auto;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* For smaller screens, e.g., mobile */
+@media (max-width: 576px) {
+  .card {
+    max-width: 95%;  /* Decrease card width */
+    margin: 0 auto;  /* Center the card */
+  }
+
+  .card-img-top {
+    height: 150px;  /* Reduce image height */
+    object-fit: cover;  /* Ensure the image is cropped appropriately */
+  }
+
+  .card-body {
+    padding: 1rem;  /* Adjust card body padding */
+  }
+
+  .card-title {
+    font-size: 1rem;  /* Smaller font size for title */
+  }
+
+  .card-text {
+    font-size: 0.85rem;  /* Smaller font size for text */
+  }
+
+  .btn {
+    font-size: 0.9rem;  /* Adjust button size */
+  }
+}
+/* Prevent horizontal scrolling */
+html, body {
+  overflow-x: hidden;  /* Disables horizontal scrolling */
+  width: 100%; /* Ensure the width is always 100% */
+}
+@media (max-width: 576px) {
+  .your-element-class {
+    margin-left: 28px;
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+/* Default styling for smaller screens */
+#myImage {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* Styling for large screens (1024px and up) */
+@media (min-width: 1024px) {
+  #myImage {
+    height: 250px;  /* Set fixed height to 250px on large screens */
   }
 }
+
+
