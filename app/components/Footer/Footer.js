@@ -17,7 +17,7 @@ const Footer = () => {
         className="form-control bg-black text-white border-white placeholder-white"
         placeholder="you@example.com"
         aria-label="Email"
-        style={{ borderRadius: '0px', color: 'white' }}
+        style={{ borderRadius: '0px', color: 'white',width:"155px" }}
       />
       <button style={{ borderRadius: '0px', background: 'black' }} className="btn btn-dark border-white text-white" type="submit">
         SUBSCRIBE
